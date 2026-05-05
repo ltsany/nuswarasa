@@ -1,0 +1,302 @@
+:root {
+    --merah: #ffffff;
+    --orange: #FF4400;
+    --kuning: #FFB33F;
+    --biru: #134E8E;
+    --bg: #f0f2f5;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--bg);
+    color: #333;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--biru);
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: var(--kuning);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 14px 18px;
+    border-radius: 12px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.menu a.active {
+    background: var(--orange);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 68, 0, 0.3);
+}
+
+.logout {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    margin-left: 260px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: #f9f9f9;
+    font-weight: 700;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+}
+
+.pending {
+    background: #f39c12;
+}
+
+.proses {
+    background: #3498db;
+}
+
+.kirim {
+    background: #8e44ad;
+}
+
+.selesai {
+    background: #2ecc71;
+}
+
+.action button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.detail {
+    background: #8B3A3A;
+    color: white;
+}
+
+.detail:hover {
+    opacity: .8;
+}
+
+select {
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+select:focus {
+    border-color: var(--orange);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+        padding: 25px 15px;
+    }
+
+    .main {
+        margin-left: 220px;
+        padding: 20px;
+    }
+
+    .search {
+        width: 200px;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+        font-size: 20px;
+        flex: 1;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .menu a:hover {
+        transform: none;
+    }
+
+    .logout {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 10px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu a {
+        padding: 7px 10px;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .main {
+        padding: 15px 10px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .action button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .status {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    select {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+}

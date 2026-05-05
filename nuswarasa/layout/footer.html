@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuswarasa - Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    
+    <style>
+        :root {
+            --merah: #C00707;
+            --kuning: #FFB33F;
+            --putih: #ffffff;
+            --teks-gelap: #333333;
+            --teks-abu: #666666;
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+        
+        .container-ramping {
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer {
+            width: 100%;
+        }
+
+        .footer-cta {
+            background-color: var(--merah);
+            padding: 20px 0; 
+            text-align: center;
+        }
+
+        .clock-icon {
+            font-size: 45px;
+            color: var(--kuning);
+            margin-bottom: 15px;
+        }
+
+        .footer-cta h3 {
+            font-size: 1.2rem;
+            color: var(--putih);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.2rem;
+            color: var(--kuning);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-cta p {
+            color: var(--putih);
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-order {
+            background-color: var(--kuning);
+            color: var(--merah); 
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn-order:hover {
+            transform: scale(1.05);
+            background-color: #f0a22a;
+        }
+
+        .or-text {
+            font-weight: bold;
+            color: var(--putih);
+        }
+
+        /* SECTION TENGAH (PUTIH) */
+        .footer-main {
+            background-color: var(--putih);
+            padding: 50px 0;
+            border-bottom: 15px solid var(--merah);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        /* LINKS */
+        .footer-col h4 {
+            font-size: 1.1rem;
+            color: var(--teks-gelap);
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .links-wrapper {
+            display: flex;
+            gap: 40px;
+        }
+
+        .links-wrapper ul {
+            list-style: none;
+        }
+
+        .links-wrapper ul li {
+            margin-bottom: 12px;
+        }
+
+        .links-wrapper ul li a {
+            text-decoration: none;
+            color: var(--teks-abu);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* LOGO */
+        .center-col { text-align: center; }
+        .brand-box h1 {
+            color: var(--merah);
+            font-size: 2.5rem;
+            font-weight: 900;
+            font-style: italic;
+            line-height: 1;
+        }
+
+        .phone-badge {
+            background-color: var(--merah);
+            color: var(--putih);
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-top: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a { font-size: 26px; }
+        .yt { color: #FF0000; } .fb { color: #1877F2; } .ig { color: #E4405F; }
+        .wa { color: #25D366; } .tt { color: #000000; }
+
+        .app-badges { display: flex; gap: 10px; margin-bottom: 20px; }
+        .app-badges img { height: 35px; }
+
+        .cs-contact {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+    .footer-cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-cta h3 {
+        font-size: 1rem;
+    }
+
+    .footer-cta p {
+        font-size: 0.9rem;
+    }
+
+    .footer-main {
+        padding: 30px 0;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
+
+    .links-wrapper {
+        gap: 20px;
+    }
+
+    .brand-box h1 {
+        font-size: 2rem;
+    }
+
+    .phone-badge {
+        font-size: 1.2rem;
+        padding: 6px 18px;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-cta {
+        padding: 30px 0;
+    }
+
+    .clock-icon {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .footer-cta h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer-cta h3 {
+        font-size: 0.85rem;
+    }
+
+    .footer-cta p {
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+    }
+
+    .btn-order {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+
+    .footer-col h4 {
+        font-size: 0.95rem;
+    }
+
+    .links-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .links-wrapper ul li {
+        margin-bottom: 10px;
+    }
+
+    .brand-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .phone-badge {
+        font-size: 1.1rem;
+        padding: 6px 16px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .cs-contact {
+        font-size: 0.82rem;
+        word-break: break-all;
+    }
+
+    .footer-copyright {
+        margin-top: 25px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-cta h2 {
+        font-size: 1.1rem;
+    }
+
+    .brand-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .phone-badge {
+        font-size: 1rem;
+    }
+
+    .container-ramping {
+        padding: 0 12px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <footer class="footer">
+        
+        <section class="footer-cta">
+            <div class="container-ramping"> <div class="cta-content">
+                    <div class="clock-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
+                    <h3>Kami Pastikan</h3>
+                    <h2>Hidangan Sampai Tepat Waktu</h2>
+                    <p>Nuswarasa — Menghadirkan cita rasa Nusantara dalam setiap hidangan.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="kuliner.php" class="btn-order">PESAN SEKARANG</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-main">
+            <div class="container-ramping"> <div class="footer-grid">
+                    
+                    <div class="footer-col">
+                        <h4>NAVIGASI CEPAT</h4>
+                        <div class="links-wrapper">
+                            <ul>
+                                <li><a href="#">Tentang Kami</a></li>
+                                <li><a href="kontak.php">Hubungi Kami</a></li>
+                                <li><a href="#">Syarat & Ketentuan</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Kebijakan Privasi</a></li>
+                                <li><a href="#">Lacak Pesanan</a></li>
+                                <li><a href="#">Lokasi Outlet</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-col center-col">
+                        <div class="brand-box">
+                            <h1>NUSWARASA</h1>
+                            <div class="phone-badge">09-11-15</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>IKUTI KAMI</h4>
+                        <div class="social-icons">
+                            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="fb"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="tt"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="cs-contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>layanan@nuswarasa.co.id</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Nuswarasa. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+</body>
+</html>

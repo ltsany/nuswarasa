@@ -1,0 +1,240 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Banner Header --- */
+.banner-red {
+    background: linear-gradient(135deg, #b30000 0%, #e60000 100%);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+/* --- Container & Layout Grid --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+/* Default Desktop: 2 Kolom */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Box & Cards --- */
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f0f0;
+}
+
+.box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b30000;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
+}
+
+/* --- Form Elements --- */
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1.5px solid #eee;
+    background: #fafafa;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff5722;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+}
+
+/* --- Payment Method Styling --- */
+.payment-label {
+    font-weight: 800;
+    margin: 15px 0 8px 0;
+    color: #333;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-card {
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.radio-card:hover {
+    border-color: #ffd54f;
+    background-color: #fffdf5;
+}
+
+.radio-card input[type="radio"]:checked+span {
+    font-weight: bold;
+}
+
+.radio-card:has(input:checked) {
+    border-color: #b30000;
+    background-color: #fff5f5;
+}
+
+.payment-details {
+    background: #fffef9;
+    border: 1px dashed #ffd54f;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+    display: none;
+}
+
+.payment-details h4 {
+    margin: 0 0 10px 0;
+    color: #f57f17;
+}
+
+/* --- Order Summary (Sidebar) --- */
+.sticky-box {
+    position: sticky;
+    top: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 15px;
+    color: #666;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #333;
+    padding-top: 5px;
+}
+
+/* --- Checkout Button --- */
+.checkout-btn {
+    display: block;
+    width: 100%;
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+}
+
+.checkout-btn:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+/* --- Responsive Design (Tablet & Mobile) --- */
+@media (max-width: 992px) {
+
+    /* Mengubah grid menjadi 1 kolom agar card berurutan ke bawah */
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sticky-box {
+        position: relative;
+        /* Mematikan sticky di mobile agar tidak menumpuk aneh */
+        top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-red {
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding: 12px 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .box {
+        padding: 20px 15px;
+    }
+
+    .payment-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,460 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+      background: #f8f8f8;
+  }
+
+  /* HEADER */
+  header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 5%;
+      background: white;
+      border-bottom: 1px solid #eee;
+      gap: 50px;
+  }
+
+  nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 18px;
+  }
+
+  .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .cta-btn {
+      background: #ff5722;
+      color: white;
+      padding: 10px 28px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+  }
+
+  .banner-red {
+      background: #b30000;
+      color: white;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+  }
+
+  .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  }
+
+  /* HERO TOKO */
+  .toko-hero {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+  }
+
+  .toko-cover {
+      height: 180px;
+      background: linear-gradient(135deg, #b30000, #ff5722);
+      position: relative;
+  }
+
+  .toko-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .toko-avatar {
+      position: absolute;
+      bottom: -40px;
+      left: 30px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid white;
+      overflow: hidden;
+      background: #b30000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: 800;
+  }
+
+  .toko-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .toko-body {
+      padding: 55px 30px 25px;
+  }
+
+  .toko-nama-besar {
+      font-size: 24px;
+      font-weight: 800;
+      color: #333;
+      margin-bottom: 6px;
+  }
+
+  .toko-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+      color: #666;
+      font-size: 14px;
+  }
+
+  .toko-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+  }
+
+  .badge-status {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .badge-aktif {
+      background: #d4edda;
+      color: #155724;
+  }
+
+  .badge-nonaktif {
+      background: #ffebee;
+      color: #e53935;
+  }
+
+  .badge-buka {
+      background: #d4edda;
+      color: #155724;
+  }
+
+  .badge-tutup {
+      background: #ffebee;
+      color: #e53935;
+  }
+
+  .toko-desc {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+  }
+
+  .toko-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+  }
+
+  .btn-wa {
+      padding: 10px 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+  }
+
+  /* STATS */
+  .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+  }
+
+  .stat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: #b30000;
+  }
+
+  .stat-label {
+      font-size: 13px;
+      color: gray;
+      margin-top: 4px;
+  }
+
+  /* JAM OPERASIONAL */
+  .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #333;
+      margin-bottom: 16px;
+  }
+
+  .jam-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+  }
+
+  .jam-item {
+      text-align: center;
+      padding: 10px 6px;
+      border-radius: 10px;
+      background: #fafafa;
+      border: 1px solid #eee;
+      font-size: 12px;
+  }
+
+  .jam-item.hari-ini {
+      background: #fff0f0;
+      border-color: #b30000;
+  }
+
+  .jam-item .hari-nama {
+      font-weight: 700;
+      color: #555;
+      margin-bottom: 4px;
+  }
+
+  .jam-item.hari-ini .hari-nama {
+      color: #b30000;
+  }
+
+  .jam-item .jam-waktu {
+      color: #333;
+      font-size: 11px;
+  }
+
+  .jam-item.hari-ini .jam-waktu {
+      color: #b30000;
+      font-weight: 700;
+  }
+
+  .jam-item .libur {
+      color: #e53935;
+      font-size: 11px;
+      font-style: italic;
+  }
+
+  /* PRODUK GRID */
+  .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+  }
+
+  .produk-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      transition: 0.2s;
+      text-decoration: none;
+  }
+
+  .produk-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .produk-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+  }
+
+  .produk-card .produk-info {
+      padding: 14px;
+  }
+
+  .produk-card .produk-nama {
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 4px;
+  }
+
+  .produk-card .produk-harga {
+      color: #b30000;
+      font-weight: 800;
+      font-size: 15px;
+  }
+
+  .produk-card .produk-kategori {
+      font-size: 11px;
+      color: gray;
+      margin-bottom: 6px;
+  }
+
+  @media (max-width: 600px) {
+      header {
+          flex-direction: column;
+          gap: 10px;
+          padding: 12px 4%;
+      }
+
+      nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+      nav a {
+          font-size: 14px;
+          margin: 0 6px;
+      }
+
+      .cta-btn {
+          font-size: 14px;
+          padding: 8px 16px;
+      }
+
+      .header-buttons {
+          justify-content: center;
+          width: 100%;
+      }
+
+      .banner-red {
+          font-size: 15px;
+          padding: 12px 10px;
+      }
+
+      .container {
+          margin: 20px auto;
+          padding: 0 12px;
+          gap: 16px;
+      }
+
+      .toko-cover {
+          height: 140px;
+      }
+
+      .toko-avatar {
+          width: 65px;
+          height: 65px;
+          font-size: 26px;
+          bottom: -32px;
+          left: 20px;
+      }
+
+      .toko-body {
+          padding: 45px 16px 18px;
+      }
+
+      .toko-nama-besar {
+          font-size: 18px;
+      }
+
+      .toko-meta {
+          gap: 10px;
+          font-size: 13px;
+      }
+
+      .stats-row {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+      }
+
+      .stat-num {
+          font-size: 22px;
+      }
+
+      .stat-label {
+          font-size: 11px;
+      }
+
+      .stat-card {
+          padding: 14px 10px;
+      }
+
+      .jam-grid {
+          grid-template-columns: repeat(3, 1fr);
+      }
+
+      .produk-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+      }
+
+      .produk-card img {
+          height: 130px;
+      }
+
+      .card {
+          padding: 18px 14px;
+      }
+
+      .card h3 {
+          font-size: 16px;
+      }
+  }
+
+  /* --- HP Mungil (max 400px) --- */
+  @media (max-width: 400px) {
+      .stats-row {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+      }
+
+      .stat-num {
+          font-size: 18px;
+      }
+
+      .jam-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .produk-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .produk-card img {
+          height: 110px;
+      }
+
+      .toko-actions {
+          flex-direction: column;
+      }
+
+      .btn-wa {
+          text-align: center;
+      }
+
+      .banner-red {
+          font-size: 13px;
+      }
+  }

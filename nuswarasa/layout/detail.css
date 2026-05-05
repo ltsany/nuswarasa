@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    border-bottom: 1px solid #eee;
+    gap: 50px
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.cta-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.banner-red {
+    background-color: #b30000;
+    color: white;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ================= LAYOUT ================= */
+
+.detail-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ================= CARD PRODUK ================= */
+
+.card-produk {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+}
+
+.foto-wrap {
+    width: 320px;
+    height: 350px;
+}
+
+.foto-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-wrap {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nama-produk {
+    font-size: 28px;
+    font-weight: 800;
+    color: #b30000;
+}
+
+.deskripsi-produk {
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ================= RATING ================= */
+
+.rating-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.bintang {
+    color: #f5a623;
+}
+
+.rating-text {
+    color: gray;
+    font-size: 13px;
+}
+
+/* ================= TOKO ================= */
+
+.toko-strip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff6f6;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.toko-ava {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #b30000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.toko-ava img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.toko-text {
+    flex: 1;
+}
+
+.toko-nama {
+    font-weight: 800;
+    color: #b30000;
+}
+
+.toko-alamat {
+    font-size: 12px;
+    color: gray;
+}
+
+.toko-status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-buka {
+    background: #e6f7ee;
+    color: #00a650;
+}
+
+.status-tutup {
+    background: #ffeaea;
+    color: #e53935;
+}
+
+/* ================= ALERT ================= */
+
+.alert-tutup {
+    background: #fff3cd;
+    color: #856404;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* ================= HARGA ================= */
+
+.harga {
+    font-size: 26px;
+    font-weight: 800;
+    color: #b30000;
+    margin-top: 10px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-kembali {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-pesan {
+    background: #b30000;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn-wa {
+    background: #25d366;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ================= JAM ================= */
+
+.card-jam {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.jam-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.jam-item {
+    background: #fafafa;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hari-nama {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.jam-waktu {
+    font-size: 11px;
+}
+
+.libur {
+    color: red;
+    font-size: 12px;
+}
+
+.hari-ini {
+    border: 2px solid #b30000;
+    background: #fff5f5;
+}
+
+/* ================= ULASAN ================= */
+
+.card-ulasan {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ulasan-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ulasan-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.ulasan-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ulasan-nama {
+    font-weight: 700;
+}
+
+.ulasan-tgl {
+    font-size: 12px;
+    color: gray;
+}
+
+.ulasan-rating {
+    color: #f5a623;
+    margin: 5px 0;
+}
+
+.ulasan-text {
+    color: #555;
+}
+
+.kosong {
+    padding: 20px;
+    text-align: center;
+    color: gray;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    .card-produk {
+        flex-direction: column;
+    }
+
+    .foto-wrap {
+        width: 100%;
+        height: 220px;
+    }
+
+    .jam-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .foto-wrap {
+        height: 180px;
+    }
+
+    .jam-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-pesan,
+    .btn-wa,
+    .btn-kembali {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .nama-produk {
+        font-size: 18px;
+    }
+
+    .harga {
+        font-size: 18px;
+    }
+
+    .banner-red {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .header-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,382 @@
+:root {
+    --merah: #ffffff;
+    --orange: #FF4400;
+    --kuning: #FFB33F;
+    --biru: #134E8E;
+    --bg: #f0f2f5;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--bg);
+    color: #333;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--biru);
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: var(--kuning);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 14px 18px;
+    border-radius: 12px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.menu a.active {
+    background: var(--orange);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 68, 0, 0.3);
+}
+
+/* LOGOUT FIX */
+.logout {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ================= MAIN ================= */
+
+.main {
+    margin-left: 260px;
+    padding: 30px;
+    width: calc(100% - 260px);
+}
+
+  .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+  }
+
+  .header h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1a1a1a;
+  }
+
+  /* NOTIF */
+  .notif {
+      padding: 12px 18px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 600;
+  }
+
+  .notif.success {
+      background: #d4edda;
+      color: #155724;
+  }
+
+  .notif.error {
+      background: #f8d7da;
+      color: #721c24;
+  }
+
+  /* FORM CARD */
+  .card {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      max-width: 700px;
+  }
+
+  .card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #c0392b;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0f0f0;
+  }
+
+  .form-group {
+      margin-bottom: 18px;
+  }
+
+  .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #444;
+      margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: #333;
+      outline: none;
+      transition: border 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+      border-color: #c0392b;
+  }
+
+  .form-group textarea {
+      resize: vertical;
+      min-height: 90px;
+  }
+
+  /* Preview foto */
+  .foto-preview {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #e0e0e0;
+      margin-bottom: 10px;
+      display: block;
+  }
+
+  .foto-placeholder {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 32px;
+      margin-bottom: 10px;
+  }
+
+  .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+  }
+
+  .btn-simpan {
+      background: #c0392b;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+  }
+
+  .btn-simpan:hover {
+      background: #a93226;
+  }
+
+  .info-belum {
+      background: #fff3cd;
+      color: #856404;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+  }
+
+  @media (max-width: 1024px) {
+      .sidebar {
+          width: 220px;
+          padding: 25px 15px;
+      }
+
+      .main {
+          margin-left: 220px;
+          width: calc(100% - 220px);
+          padding: 20px;
+      }
+
+      .card {
+          max-width: 100%;
+          padding: 24px;
+      }
+  }
+
+  /* --- Tablet Kecil (max 768px) --- */
+  /* Sidebar jadi top navbar */
+  @media (max-width: 768px) {
+      body {
+          flex-direction: column;
+      }
+
+      .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+          padding: 15px 20px;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+
+      .logo {
+          margin-bottom: 0;
+          font-size: 20px;
+          flex: 1;
+      }
+
+      .menu {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 6px;
+          width: 100%;
+          flex-grow: 0;
+      }
+
+      .menu a {
+          padding: 8px 12px;
+          font-size: 13px;
+          border-radius: 8px;
+      }
+
+      .menu a:hover {
+          transform: none;
+      }
+
+      .logout {
+          margin-top: 0;
+          padding-top: 0;
+          border-top: none;
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          padding-left: 10px;
+      }
+
+      .main {
+          margin-left: 0;
+          width: 100%;
+          padding: 20px 15px;
+      }
+
+      .row-2 {
+          grid-template-columns: 1fr;
+      }
+
+      .card {
+          padding: 20px;
+      }
+  }
+
+  /* --- HP (max 600px) --- */
+  @media (max-width: 600px) {
+      .sidebar {
+          padding: 12px 15px;
+      }
+
+      .logo {
+          font-size: 18px;
+      }
+
+      .menu a {
+          padding: 7px 10px;
+          font-size: 12px;
+          gap: 6px;
+      }
+
+      .main {
+          padding: 15px 10px;
+      }
+
+      .header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          margin-bottom: 18px;
+      }
+
+      .header h2 {
+          font-size: 18px;
+      }
+
+      .card {
+          padding: 16px 14px;
+          border-radius: 10px;
+      }
+
+      .card h3 {
+          font-size: 14px;
+          margin-bottom: 18px;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+          padding: 9px 12px;
+          font-size: 13px;
+      }
+
+      .btn-simpan {
+          width: 100%;
+          padding: 13px;
+          font-size: 15px;
+      }
+
+      .notif {
+          font-size: 13px;
+          padding: 10px 14px;
+      }
+
+      .info-belum {
+          font-size: 12px;
+          padding: 12px 14px;
+      }
+  }
